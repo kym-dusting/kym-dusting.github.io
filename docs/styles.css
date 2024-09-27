@@ -49,10 +49,8 @@ body {
 .intro h1 {
     font-size: min(calc(100vh / 3), calc(100vw / 8)); /* Adjust font size for 1/3 viewport height */
     text-transform: uppercase;
-    @media (min-width: 768px) {
-        &::first-letter {
-            padding-right: 15px;
-        }
+    &::first-letter {
+        padding-right: .025em;
     }
 }
 
@@ -73,7 +71,7 @@ body {
     animation: shine 2s linear infinite;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     display: inline;
-    padding-right: 40px;
+    padding-right: .2em;
 }
 .intro span[class]:after {
     font-size: min(calc(100vh / 3), calc(100vw / 10));
@@ -243,7 +241,7 @@ html {
      height: 1.2em;
      width: 1.2em;
      left: -6px;
-     top: -5px;
+     top: -8px;
      border-radius: 50%;
      border: 10px solid #ff6944;
      z-index: -1;
@@ -275,7 +273,7 @@ html {
     margin: 0;
     padding: 0;
     margin-left: 48px;
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
 .logo.hidden ul li {
@@ -293,4 +291,52 @@ html {
     text-decoration: none; /* Remove underline */
     font-size: 1.2em; /* Adjust icon size as needed */
     filter: drop-shadow(2px 3px 1px #a42d13);
+}
+
+@media (max-width: 768px) {
+    .logo {
+        position: fixed;
+        top: 10px;
+        left: 20px;
+        font-size: 2em;
+        line-height: 2em;
+         width: 1.6em;
+       }
+
+       .logo h1:before {
+         height: 1.2em;
+         width: 1.2em;
+         left: -6px;
+         top: -8px;
+         border: 10px solid #ff6944;
+       }
+
+       .logo h1 {
+         font-size: 1.6em;
+         text-shadow: 0 1px 0px #a42d13,
+           1px 0 0px #a42d13,
+           -1px -2px 1px #a42d13,
+           -2px 2px 1px #a42d13,
+           1px 2px 1px #a42d13,
+           2px 1px 1px #a42d13,
+           2px 3px 2px #a42d13,
+           3px 2px 2px #a42d13;
+         letter-spacing: -5px;
+       }
+
+
+    .logo ul {
+        margin-left: 36px;
+        margin-top: 18px;
+    }
+
+    .logo ul li {
+        margin-right: 20px; /* Adjust spacing between icons as needed */
+    }
+
+    .logo ul li a {
+        font-size: .8em; /* Adjust icon size as needed */
+        filter: drop-shadow(2px 3px 1px #a42d13);
+    }
+
 }
